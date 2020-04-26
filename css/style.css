@@ -12,6 +12,8 @@ body {
 
 header {
     font-size: 16px;
+    background: #fdfdfd;
+    border-bottom: 1px solid #f3f3f3;
 }
 
 header .row {
@@ -37,14 +39,9 @@ a.purchase {
     padding: 12px 25px;
     border-radius: 120px;
     text-transform: uppercase;
-    float: right;
     font-weight: bold;
     transition: 1s;
     font-size: 12px;
-}
-
-header {
-    margin-top: 30px;
 }
 
 menu a.selected {
@@ -68,4 +65,14 @@ a.purchase:hover {
     color: black;
     border: 2px solid #29c367;
     text-decoration: none;
+}
+
+.col-sm-10 .logo, .col-sm-10 .purchase {
+    text-align: center;
+    float: none;
+    width: 100%;
+}
+
+.col-sm-10 .purchase {
+    margin-bottom: 20px;
 }
