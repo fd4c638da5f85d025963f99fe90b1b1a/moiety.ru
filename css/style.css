@@ -1,0 +1,71 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+    width: 100%;
+}
+
+header {
+    font-size: 16px;
+}
+
+header .row {
+    text-align: center;
+}
+
+menu a {
+    display: inline-block;
+    margin: 0 10px;
+    text-transform: uppercase;
+    color: black;
+}
+
+menu {
+    padding: 0;
+    font-size: 14px;
+}
+
+a.purchase {
+    display: inline-block;
+    border: 2px solid #42dbad;
+    color: #42dbad;
+    padding: 12px 25px;
+    border-radius: 120px;
+    text-transform: uppercase;
+    float: right;
+    font-weight: bold;
+    transition: 1s;
+    font-size: 12px;
+}
+
+header {
+    margin-top: 30px;
+}
+
+menu a.selected {
+    font-weight: bold;
+}
+
+menu a:not(.selected):hover {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+a.selected:hover {
+    color: black;
+    text-decoration: none;
+    cursor: not-allowed;
+}
+
+a.purchase:hover {
+    background: #42dbad;
+    color: black;
+    border: 2px solid #29c367;
+    text-decoration: none;
+}
