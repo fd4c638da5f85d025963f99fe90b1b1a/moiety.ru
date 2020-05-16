@@ -2,6 +2,8 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.container-fluid {padding:0}
+
 .logo {
     display: block;
     font-weight: bold;
@@ -76,3 +78,16 @@ a.purchase:hover {
 .col-sm-10 .purchase {
     margin-bottom: 20px;
 }
+
+.container-fluid .block, .skills .row {
+    text-align: center;
+    justify-content: center!important;
+    padding-bottom: 100px;
+    margin: 0;
+}
+
+.skills i {
+    font-size: 100px;
+}
+
+@media (max-width: 768px) {.container-fluid .block, .skills .row {padding: 10px 0;}}
