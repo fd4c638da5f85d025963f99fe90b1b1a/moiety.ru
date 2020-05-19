@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.container-fluid {padding:0}
+.container {padding:0}
 
 .logo {
     display: block;
@@ -20,6 +20,10 @@ header {
 
 header .row {
     text-align: center;
+}
+
+.row {
+    margin: 0;
 }
 
 menu a {
@@ -79,15 +83,47 @@ a.purchase:hover {
     margin-bottom: 20px;
 }
 
-.container-fluid .block, .skills .row {
+.unit {
+    padding-bottom: 100px;
+}
+
+.block .row, .row.block {
     text-align: center;
     justify-content: center!important;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     margin: 0;
 }
 
-.skills i {
-    font-size: 100px;
+.skills i, .contacts i {
+    font-size: 58px;
+    display: inline-block;
+    height: 80px;
+    width: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 15%;
 }
 
-@media (max-width: 768px) {.container-fluid .block, .skills .row {padding: 10px 0;}}
+.contacts p {
+    margin:0;
+}
+
+@media (max-width: 768px) {.block .row {padding: 10px 0;}}
+
+.portfolio a:not(.more) {
+    display: inline-block;
+    height: 200px;
+    width: 250px;
+    border: 1px solid #f3f3f3;
+    border-radius: 15px;
+    background-size: cover;
+}
+
+.portfolio a:hover {
+    opacity: 0.7;
+}
+
+footer {
+    padding: 50px 0;
+}
