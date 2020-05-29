@@ -1,0 +1,9 @@
+{
+"tpl":"html",
+"db": {
+"host":"localhost",
+"user":"root",
+"pass":"",
+"name":"db"
+}
+}

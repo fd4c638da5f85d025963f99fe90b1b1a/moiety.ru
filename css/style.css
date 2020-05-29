@@ -48,12 +48,11 @@ a.purchase {
 
 menu a.selected {
     font-weight: bold;
+    pointer-events: none;
 }
 
 menu a:not(.selected):hover {
-    text-decoration: none;
-    color: #000000;
-    font-weight: bold;
+    color: #717171;
 }
 
 a.selected:hover {
@@ -131,3 +130,27 @@ footer {
 a:hover {
     text-decoration: none;
 }
+[loading] {
+    
+    pointer-events: none;
+}
+
+[data-title]:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    background:rgba(255, 255, 255, 0.85);
+    color: #676767;
+    padding: 5px;
+    border: 1px solid #f3f3f3;
+   }
+   menu a[data-title]:hover::after {
+    margin-top: 20px;
+    margin-left: -40px;
+    font-size: 8px;
+   }
+   p[data-title]:hover::after {
+    margin-top: 40px;
+    margin-left: -230px;
+   }
