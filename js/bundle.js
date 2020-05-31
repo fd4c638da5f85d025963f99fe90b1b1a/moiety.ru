@@ -1,19 +1,3 @@
-var swiper = new Swiper('.swiper-container', {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
     var t;
     function up() {
       var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
@@ -37,9 +21,36 @@ var swiper = new Swiper('.swiper-container', {
         document.title = result[0];
         $("[content]").html(result[1]);
         $('[content], [loading]').removeAttr('loading');
+        if (location.pathname == '/') {
+        swiperInit();
+        }
       });
     }
+    function swiperInit(elem) {
+        if (elem == undefined) {
+          elem = '.swiper-container';
+        }
+        var swiper = new Swiper(elem, {
+          spaceBetween: 30,
+          centeredSlides: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+    }
     window.onload = function() {
+      if (location.pathname == '/') {
+        swiperInit();
+        }
     $("body").on('click', 'menu a, #ajax', function() {
       hrAjax(this.href);
       history.pushState(null, null, this.href);

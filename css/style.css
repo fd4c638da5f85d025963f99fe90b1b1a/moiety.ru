@@ -154,3 +154,7 @@ a:hover {
     margin-top: 40px;
     margin-left: -230px;
    }
+   [disabled] {
+    pointer-events: none;
+    opacity: 0.2;
+}
